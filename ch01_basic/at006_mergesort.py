@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
-# at006_mergesort: 归并排序
+# at006_mergesort: 归并排序(分治法)
 """
     Topic: sample
     Desc : 归并排序

@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
-# at007_mergesort: 归并排序中对小数组采用插入排序
+# at007_mergesort2: 归并排序中对小数组采用插入排序
 """
     Topic: sample
     Desc : 归并排序中对小数组采用插入排序
@@ -23,7 +23,7 @@ __author__ = 'Xiong Neng'
 
 
 def mergeSort(seq):
-    mergeSortRange(seq, 0, len(seq) - 1, log(len(seq)) - 1)
+    mergeSortRange(seq, 0, len(seq) - 1, log(len(seq), 2))
 
 
 def mergeOrderedSeq(seq, left, middle, right):
@@ -57,7 +57,7 @@ def mergeSortRange(seq, start, end, threshold):
     end: 子序列的end下标
     threshold: 待排序长度低于这个值，就采用插入排序
     """
-    if end - start < threshold:
+    if end - start + 1 < threshold:
         tempSeq = seq[start: end + 1]
         insertSort(tempSeq)
         seq[start: end + 1] = tempSeq[:]
