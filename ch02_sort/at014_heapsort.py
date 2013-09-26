@@ -20,14 +20,28 @@
 __author__ = 'Xiong Neng'
 
 
-def heapSort(heap):
+class Heap():
+    def __init__(self, seq, heapSize, length):
+        """
+        seq: 存放待排序的序列
+        heapSize: 堆的大小
+        lenght: 整个序列大小
+        """
+        self.seq = seq
+        self.heapSize = heapSize
+        self.length = length
+
+
+def heapSort(seq):
     """
     堆排序算法
     """
+    heap = Heap(seq, len(seq), len(seq))
     __buildMaxHeap(heap)
-    for i in range(heap[2] - 1, 0, -1):
-        heap[0][0], heap[0][i] = heap[0][i], heap[0][0]
-        heap[1] -= 1
+    s = heap.seq
+    for i in range(heap.length - 1, 0, -1):
+        s[0], s[i] = s[i], s[0]
+        heap.heapSize -= 1
         __maxHeapify(heap, 0)
 
 
@@ -35,10 +49,10 @@ def __maxHeapify(heap, i):
     """
     前提是i的两棵子树left(i)和right(i)的二叉树都是最大堆了
     现在加入i节点后，要保持这个二叉树为最大堆的性质
-    heap: 一个包含[seq，heapSize，length]的数组
+    heap: Heap数据结构
     """
-    seq = heap[0]
-    slen = heap[1]
+    seq = heap.seq
+    slen = heap.heapSize
     while True:
         left = (i << 1) + 1
         right = (i + 1) << 1
@@ -59,15 +73,15 @@ def __buildMaxHeap(heap):
     """
     由完全二叉树的性质可知：对于 n/2..n-1为下标的元素，都是叶子节点，
     那么可从下标floor((i+1)/2 - 1)开始往前到0的元素调用maxHeapify
-    heap: 一个包含[seq，heapSize，length]的数组
+    heap: Heap数据结构
     """
-    slen = heap[1] = heap[2]
+    slen = heap.heapSize
     for i in range(((slen + 1) >> 1) - 1, -1, -1):
         __maxHeapify(heap, i)
 
 
 if __name__ == '__main__':
-    h = [[9, 7, 8, 10, 16, 3, 14, 2, 1, 4], 0, 10]
-    heapSort(h)
-    print(h[0])
+    iSeq = [9, 7, 8, 10, 16, 3, 14, 2, 1, 4]
+    heapSort(iSeq)
+    print(iSeq)
 
