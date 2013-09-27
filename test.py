@@ -12,3 +12,7 @@ print(a)
 aa = [(3, 5, 7), (2, 3, 14), (3, 3, 9)]
 print(max(aa, key=lambda k: k[2]))
 print(range(5, 0 - 1, -1))
+
+wa = [[]] * 2
+wa[0].append(0.45)
+print(wa)
