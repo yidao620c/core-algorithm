@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
-# at021_findminmax: 在数组中同时找出最小和最大的
+# at207_findminmax: 在数组中同时找出最小和最大的
 """
     Topic: sample
     Desc : 在数组中同时找出最小和最大的

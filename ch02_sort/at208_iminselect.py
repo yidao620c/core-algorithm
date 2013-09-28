@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
-# at022_iminselect: 顺序统计量的选择算法
+# at208_iminselect: 顺序统计量的选择算法
 """
     Topic: sample
     Desc : 顺序统计量的选择算法

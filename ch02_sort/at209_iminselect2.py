@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
-# at023_iminselect2: 顺序统计量的选择算法(最坏情况下O(n))
+# at209_iminselect2: 顺序统计量的选择算法(最坏情况下O(n))
 """
     Topic: sample
     Desc : 顺序统计量的选择算法(最坏情况下O(n))

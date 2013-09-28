@@ -1,11 +1,11 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
-# at016_priorqueue: 最大堆实现最大优先级队列
+# at202_priorqueue: 最大堆实现最大优先级队列
 """
     Topic: sample
     Desc : 最大堆实现最大优先级队列
 """
-import at014_heapsort as hsort
+import at200_heapsort as hsort
 
 __author__ = 'Xiong Neng'
 

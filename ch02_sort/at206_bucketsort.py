@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
-# at020_buketsort: 桶排序
+# at206_buketsort: 桶排序
 """
     Topic: sample
     Desc : 桶排序
