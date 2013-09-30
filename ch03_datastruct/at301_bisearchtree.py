@@ -16,6 +16,7 @@ class Tree():
 
 class Node():
     """节点元素定义"""
+
     def __init__(self, key, p=None, left=None, right=None):
         self.key = key
         self.p = p
@@ -101,10 +102,50 @@ def treeInsert(tree, node):
         else:
             root = root.right
     node.p = y
-    if not y:  # empty tree
+    if y is None:  # empty tree
         tree.root = node
     elif node.key < y.key:
         y.left = node
     else:
         y.right = node
+
+
+def treeDelete(T, z):
+    """
+    二叉搜索树的删除算法
+    算法思想：
+    1，如果z没有孩子节点，简单简单的将其删除，并修改它的父节点，用None作为孩子来替换
+    2，如果z只有一个孩子，那么将这个孩子提升到树中z的位置，并修改z的父节点，用z的孩子替换z
+    3，如果z有两个孩子，那么寻找z的后继节点y（一定在z的右子树中），找到后：
+        i：如果y是z的右孩子，那么用y替换z，并仅留下y的右孩子。（y肯定没有左孩子）
+        ii：否则，先用y的右孩子替换，然后再用y替换z
+    """
+    if z.left is None:
+        transplant(T, z, z.right)
+    elif z.right is None:
+        transplant(T, z, z.left)
+    else:
+        y = treeMinimum(z.right)
+        if y.p != z:
+            transplant(T, y, y.right)
+            y.right = z.right
+            y.right.p = y
+        transplant(T, z, y)
+        y.left = z.left
+        y.left.p = y
+
+
+def transplant(T, u, v):
+    """子树替换：在树T中用根节点节点为v的子树替换根节点为u的子树"""
+    if u.p is None:
+        T.root = v
+    elif u == u.p.left:
+        u.p.left = v
+    else:
+        u.p.right = v
+    if not v:
+        v.p = u.p
+
+
+
 
