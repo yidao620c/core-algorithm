@@ -55,18 +55,16 @@ def treeSearch2(tree, x):
     return root
 
 
-def treeMinimum(tree):
-    root = tree.root
-    while root.left:
-        root = root.left
-    return root
+def treeMinimum(node):
+    while node.left:
+        node = node.left
+    return node
 
 
-def treeMaximum(tree):
-    root = tree.root
-    while root.right:
-        root = root.right
-    return root
+def treeMaximum(node):
+    while node.right:
+        node = node.right
+    return node
 
 
 def nextNode(node):
