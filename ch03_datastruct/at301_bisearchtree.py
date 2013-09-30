@@ -10,7 +10,7 @@ __author__ = 'Xiong Neng'
 
 
 class Tree():
-    def __init__(self, root):
+    def __init__(self, root=None):
         self.root = root
 
 
@@ -26,11 +26,15 @@ class Node():
 
 def inOrderWalk(tree):
     """中序遍历二叉搜索树，从小到大输出元素"""
-    root = tree.root
-    if root:
-        inOrderWalk(root.left)
-        print root.key
-        inOrderWalk(root.right)
+    inOrderWalkNode(tree.root)
+
+
+def inOrderWalkNode(node):
+    """中序遍历二叉搜索树，从小到大输出元素"""
+    if node:
+        inOrderWalkNode(node.left)
+        print(node.key)
+        inOrderWalkNode(node.right)
 
 
 def treeSearch(tree, x):
@@ -145,5 +149,10 @@ def transplant(T, u, v):
         v.p = u.p
 
 
-
+if __name__ == '__main__':
+    ss = [4, 23, 65, 22, 12, 3, 7, 1, 256, 34, 27]
+    tree = Tree()
+    for i in ss:
+        treeInsert(tree, Node(i))
+    inOrderWalk(tree)
 

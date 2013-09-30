@@ -12,7 +12,8 @@
             5，对每个结点，从该结点到其所有后代叶结点的简单路径上，均包含相同数目的黑色结点。
     一个有n个内部结点的红黑树的高度最多为2lg(n+1)
 """
-from at301_bisearchtree import treeMinimum
+from at301_bisearchtree import treeMinimum, inOrderWalk
+
 __author__ = 'Xiong Neng'
 
 
@@ -20,15 +21,17 @@ class RBTree():
     COLOR_RED = 0
     COLOR_BLACK = 1
 
-    def __init__(self, root):
+    def __init__(self, root=None):
         self.root = root
         self.nil = RBNode('', RBTree.COLOR_BLACK)
+        if root is None:
+            self.root = self.nil
 
 
 class RBNode():
     """节点元素定义"""
 
-    def __init__(self, key, color, p=None, left=None, right=None):
+    def __init__(self, key, color=RBTree.COLOR_RED, p=None, left=None, right=None):
         self.key = key
         self.color = color
         self.p = p
@@ -73,7 +76,7 @@ def rightRotate(T, x):
     x.p = y
 
 
-def rbInsert(T, z):
+def rbTreeInsert(T, z):
     """
      红黑树的插入算法
     """
@@ -111,15 +114,24 @@ def rbInsertFixup(T, z):
                 y.color = BLACK
                 z.p.p.color = RED
                 z = z.p.p
-            elif z == z.p.right:
-                z = z.p
-                leftRotate(T, z)
+            else:
+                if z == z.p.right:
+                    z = z.p
+                    leftRotate(T, z)
                 z.p.color = BLACK
                 z.p.p.color = RED
                 rightRotate(T, z.p.p)
+        elif z.p == z.p.p.right:
+            y = z.p.p.left
+            if y.color == RED:
+                z.p.color = BLACK
+                y.color = BLACK
+                z.p.p.color = RED
+                z = z.p.p
             else:
-                z = z.p
-                rightRotate(T, z)
+                if z == z.p.left:
+                    z = z.p
+                    rightRotate(T, z)
                 z.p.color = BLACK
                 z.p.p.color = RED
                 leftRotate(T, z.p.p)
@@ -215,3 +227,22 @@ def rbDeleteFixup(T, x):
                 x = T.root
     x.color = BLACK
 
+
+def inOrderRBWalk(tree):
+    """中序遍历二叉搜索树，从小到大输出元素"""
+    inOrderRBWalkNode(tree.root, tree.nil)
+
+
+def inOrderRBWalkNode(node, ni):
+    """中序遍历二叉搜索树，从小到大输出元素"""
+    if node and node != ni:
+        inOrderRBWalkNode(node.left, ni)
+        print(node.key)
+        inOrderRBWalkNode(node.right, ni)
+
+if __name__ == '__main__':
+    ss = [4, 23, 65, 22, 12, 3, 7, 1, 256, 34, 27]
+    tree = RBTree()
+    for i in ss:
+        rbTreeInsert(tree, RBNode(i))
+    inOrderRBWalk(tree)
