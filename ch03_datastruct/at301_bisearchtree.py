@@ -27,13 +27,14 @@ class Node():
 def inOrderWalk(tree):
     """中序遍历二叉搜索树，从小到大输出元素"""
     inOrderWalkNode(tree.root)
+    print('')
 
 
 def inOrderWalkNode(node):
     """中序遍历二叉搜索树，从小到大输出元素"""
     if node:
         inOrderWalkNode(node.left)
-        print(node.key)
+        print(node.key),
         inOrderWalkNode(node.right)
 
 
@@ -145,7 +146,7 @@ def transplant(T, u, v):
         u.p.left = v
     else:
         u.p.right = v
-    if not v:
+    if v:
         v.p = u.p
 
 
@@ -154,5 +155,10 @@ if __name__ == '__main__':
     tree = Tree()
     for i in ss:
         treeInsert(tree, Node(i))
+    n = Node(26)
+    treeInsert(tree, n)
     inOrderWalk(tree)
+    treeDelete(tree, n)
+    inOrderWalk(tree)
+
 

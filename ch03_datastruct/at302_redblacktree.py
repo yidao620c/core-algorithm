@@ -149,7 +149,7 @@ def rbTransplant(T, u, v):
     v.p = u.p
 
 
-def rbDelete(T, z):
+def rbTreeDelete(T, z):
     """红黑树删除算法"""
     BLACK = RBTree.COLOR_BLACK
     y = z
@@ -231,13 +231,14 @@ def rbDeleteFixup(T, x):
 def inOrderRBWalk(tree):
     """中序遍历二叉搜索树，从小到大输出元素"""
     inOrderRBWalkNode(tree.root, tree.nil)
+    print('')
 
 
 def inOrderRBWalkNode(node, ni):
     """中序遍历二叉搜索树，从小到大输出元素"""
     if node and node != ni:
         inOrderRBWalkNode(node.left, ni)
-        print(node.key)
+        print(node.key),
         inOrderRBWalkNode(node.right, ni)
 
 if __name__ == '__main__':
@@ -245,4 +246,9 @@ if __name__ == '__main__':
     tree = RBTree()
     for i in ss:
         rbTreeInsert(tree, RBNode(i))
+    inOrderRBWalk(tree)
+    n = RBNode(26)
+    rbTreeInsert(tree, n)
+    inOrderRBWalk(tree)
+    rbTreeDelete(tree, n)
     inOrderRBWalk(tree)
