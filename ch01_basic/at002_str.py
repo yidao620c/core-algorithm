@@ -21,4 +21,4 @@ def triangleDisplay(mystr):
     return result
 
 for each in triangleDisplay(u"我和我的小伙伴们都惊呆了"):
-    print each
+    print(each)
