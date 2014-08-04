@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
-# at014_rightshift: 数组循环右移
+# at014_right_shift: 数组循环右移
 """
     Topic: sample
     Desc : 数组循环右移

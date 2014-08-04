@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
-# at013_randpermute: 随机排列数组算法
+# at013_rand_permute: 随机排列数组算法
 """
     Topic: sample
     Desc : 随机排列数组算法

@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
-# at002_str: 三角打印字符串
+# at002_triangle_str: 三角打印字符串
 """
     Topic: sample
     Desc : 三角打印字符串
