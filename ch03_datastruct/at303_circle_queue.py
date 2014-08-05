@@ -16,17 +16,17 @@ def circle_out(n, m):
     out_count = 0  # 出队人数
     pass_num = 0  # 每次小循环经过的人数
     index = 0  # 循环下标
-    previous_index = index  # 保存循环下标的前一个下标
     while out_count < n:
-        while pass_num < m:
+        while True:
             if queue_status[index] == 1:
                 pass_num += 1
-            previous_index = index
+            if pass_num >= m:
+                break
             index = (index + 1) % n
         # 出队
-        queue_status[previous_index] = 0
+        queue_status[index] = 0
         out_count += 1
-        result.append(previous_index + 1)
+        result.append(index + 1)
         pass_num = 0
     print(result)
     return result

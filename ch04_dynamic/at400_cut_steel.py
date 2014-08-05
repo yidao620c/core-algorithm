@@ -11,7 +11,7 @@ __author__ = 'Xiong Neng'
 
 
 def bottom_up_cut_rod(p, n):
-    """自顶向上版本的动态规划
+    """自底向上版本的动态规划，自底向上时间复杂性函数通常具有更小的系数
     自底向上版本采用子问题的自然顺序，若i<j，则规模为i的子问题比规模为j的子问题更小。
     因此，过程依次求解规模为j=0,1...n的子问题
 
@@ -32,9 +32,8 @@ def bottom_up_cut_rod(p, n):
                 q = p[i] + r[j - i]
                 ii = i
         r[j] = q
-        ans.append([ii] + ans[j-ii])
+        ans.append([ii] + ans[j - ii])
     return r[n], ans[len(ans) - 1]
-
 
 if __name__ == '__main__':
     parry = [0, 1, 5, 8, 9, 10, 17, 17, 20, 24, 30]
