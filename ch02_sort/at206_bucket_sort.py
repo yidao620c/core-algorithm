@@ -10,7 +10,9 @@
         然后循环n个桶，对每个桶排序，采用插入排序算法
 """
 from math import floor
-from ch01_basic.at003_insert_sort import insertSort
+
+from ch02_sort.at103_insert_sort import insertSort
+
 __author__ = 'Xiong Neng'
 
 

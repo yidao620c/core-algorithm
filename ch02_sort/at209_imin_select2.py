@@ -6,8 +6,7 @@
     Desc : 顺序统计量的选择算法(最坏情况下O(n))
         利用中位数的中位数作为pivot划分数组
 """
-from ch01_basic.at003_insert_sort import insertSort
-from random import shuffle
+from ch02_sort.at103_insert_sort import insertSort
 
 __author__ = 'Xiong Neng'
 

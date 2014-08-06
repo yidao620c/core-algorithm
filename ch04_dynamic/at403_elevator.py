@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
-# 电梯调度算法
+# 动态规划：电梯调度算法
 """
     Topic: sample
     Desc : 电梯调度算法
