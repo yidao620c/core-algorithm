@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
-# at010_maxsubarr3: 寻找最大子数组(非递归的线性时间算法)
+# 寻找最大子数组(非递归的线性时间算法)
 """
     Topic: sample
     Desc : 寻找最大子数组(非递归的线性时间算法)

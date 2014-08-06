@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
-# at007_mergesort2: 归并排序中对小数组采用插入排序
+# 归并排序中对小数组采用插入排序
 """
     Topic: sample
     Desc : 归并排序中对小数组采用插入排序

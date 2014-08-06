@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
-# at205_radixsort: 基数排序
+# 基数排序
 """
     Topic: sample
     Desc : 基数排序

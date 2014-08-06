@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
-# at015_sincpu: CPU正弦曲线
+# CPU正弦曲线
 """
     Topic: sample
     Desc : CPU正弦曲线

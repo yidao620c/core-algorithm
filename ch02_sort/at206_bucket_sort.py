@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
-# at206_buketsort: 桶排序
+# 桶排序
 """
     Topic: sample
     Desc : 桶排序
@@ -10,7 +10,7 @@
         然后循环n个桶，对每个桶排序，采用插入排序算法
 """
 from math import floor
-from ch01_basic.at003_insertsort import insertSort
+from ch01_basic.at003_insert_sort import insertSort
 __author__ = 'Xiong Neng'
 
 

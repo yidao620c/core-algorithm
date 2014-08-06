@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
-# at017_bracket_match: 括号匹配
+# 括号匹配
 """
     Topic: 输入字符串，判断是否是合法的括号组合
     Desc :

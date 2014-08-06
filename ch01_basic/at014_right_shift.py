@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
-# at014_right_shift: 数组循环右移
+# 数组循环右移
 """
     Topic: sample
     Desc : 数组循环右移
@@ -8,7 +8,7 @@
 __author__ = 'Xiong Neng'
 
 
-def rightShift(seq, k):
+def right_shift(seq, k):
     n = len(seq)
     k %= n
     seq[0:n - k] = seq[n - k - 1::-1]
@@ -18,5 +18,5 @@ def rightShift(seq, k):
 
 if __name__ == '__main__':
     s = list('abcd1234')
-    rightShift(s, 4)
+    right_shift(s, 4)
     print(s)

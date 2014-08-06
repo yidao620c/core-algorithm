@@ -1,12 +1,12 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
-# at209_iminselect2: 顺序统计量的选择算法(最坏情况下O(n))
+# 顺序统计量的选择算法(最坏情况下O(n))
 """
     Topic: sample
     Desc : 顺序统计量的选择算法(最坏情况下O(n))
         利用中位数的中位数作为pivot划分数组
 """
-from ch01_basic.at003_insertsort import insertSort
+from ch01_basic.at003_insert_sort import insertSort
 from random import shuffle
 
 __author__ = 'Xiong Neng'

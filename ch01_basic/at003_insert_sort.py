@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
-# at003_insertsort: 插入排序
+# 插入排序
 """
     Topic: sample
     Desc : 插入排序

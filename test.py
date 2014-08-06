@@ -4,7 +4,7 @@
     Topic: sample
     Desc : 
 """
-from ch01_basic import at010_maxsubarr
+from ch01_basic import at010_max_subarr
 __author__ = 'Xiong Neng'
 
 def main():

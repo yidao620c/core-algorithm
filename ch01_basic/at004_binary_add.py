@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
-# at004_binaryadd: 两个N位的二进制数相加
+# 两个N位的二进制数相加
 """
     Topic: sample
     Desc : 两个N位的二进制数相加

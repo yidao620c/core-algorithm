@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
-# at008_hornerpoly: Horner多项式求值算法
+# Horner多项式求值算法
 """
     Topic: sample
     Desc : Horner多项式求值算法

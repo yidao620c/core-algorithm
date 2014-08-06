@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
-# at016_bestsinger: 歌曲投票
+# 歌曲投票
 """
     Topic: 找出7号歌曲包揽5项大奖的投票组合
     Desc :
@@ -59,13 +59,13 @@ def analyse_votes(votes):
         result.append(sort_row[0])
         counts.clear()
 
-    print 'The Champion'.center(50, '*')
+    print('The Champion'.center(50, '*'))
     for r in range(len(result)):
-        print 'column %2d: ' % (r + 1,), result[r]
+        print('column %2d: ' % (r + 1,), result[r])
 
-    print 'Last votes: '.center(50, '*')
+    print('Last votes: '.center(50, '*'))
     for r in votes:
-        print r
+        print(r)
 
 
 def main():

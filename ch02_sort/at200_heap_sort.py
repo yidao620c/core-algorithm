@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
-# at200_heapsort: 堆排序
+# 堆排序
 """
     Topic: sample
     Desc : 堆排序

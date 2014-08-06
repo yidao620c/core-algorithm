@@ -1,43 +1,32 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
-# at010_maxsubarr2: 寻找最大子数组(对小数组采用暴力算法)
+# 寻找最大子数组(分治法)
 """
     Topic: sample
-    Desc : 寻找最大子数组(对小数组采用暴力算法)
-        理论跟归并排序中对小数组采用插入排序一样，有个阀值，直接写结论：
-        最后结论：  k < lg(n)的时候，使用暴力算法
+    Desc : 寻找最大子数组
+        寻找数组A的和最大的非空连续的子数组
+        假定寻找子数组A[low..high]的最大子数组，使用分治法将A划分为两个规模尽量相等的子数组
+        A[low..middle]和A[middle+1..high]，那么A[low..high]的任何连续子数组必须是下来三种之一：
+        1， 完全位于A[low..middle]中，即low<=i<=j<=middle
+        2， 完全位于A[middle+1..high]中，即middle<i<=j<=high
+        3， 跨越了中点，因此low<=i<=middle<j<=high
 """
-from math import log
 __author__ = 'Xiong Neng'
 
 
 def maxSubArr(seq):
-    return __findMaxSubArr(seq, 0, len(seq) - 1, log(len(seq), 2))
+    return __findMaxSubArr(seq, 0, len(seq) - 1)
 
 
-def __findMaxSubArr(seq, low, high, threshold):
-    if high - low + 1 < threshold:
-        return __violentSubArr(seq, low, high)
-    elif low == high:
+def __findMaxSubArr(seq, low, high):
+    if low == high:
         return low, high, seq[low]
     else:
         mid = (low + high) / 2
-        l = lefLow, leftHigh, leftSum = __findMaxSubArr(seq, low, mid, threshold)
-        r = rightLow, rightHigh, right_sum = __findMaxSubArr(seq, mid + 1, high, threshold)
+        l = lefLow, leftHigh, leftSum = __findMaxSubArr(seq, low, mid)
+        r = rightLow, rightHigh, right_sum = __findMaxSubArr(seq, mid + 1, high)
         c = crossLow, crossHigh, crossSum = __maxCrossingSubArr(seq, low, mid, high)
         return max([l, r, c], key=lambda k: k[2])  # 这个太cool了
-
-
-def __violentSubArr(seq, low, high):
-    maxSum = float('-Inf')
-    for i in range(low, high + 1):
-        eachSum = 0
-        for j in range(i, high + 1):
-            eachSum += seq[j]
-            if eachSum > maxSum:
-                low, high = i, j
-                maxSum = eachSum
-    return low, high, maxSum
 
 
 def __maxCrossingSubArr(seq, low, mid, high):

@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
-# at009_bubblesort: 冒泡排序
+# 冒泡排序
 """
     Topic: sample
     Desc : 冒泡排序

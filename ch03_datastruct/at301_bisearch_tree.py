@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
-# at301_bisearchtree: 二叉搜索树
+# 二叉搜索树
 """
     Topic: sample
     Desc : 二叉搜索树

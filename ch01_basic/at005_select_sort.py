@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
-# at005_selectsort: 选择排序
+# 选择排序
 """
     Topic: sample
     Desc : 选择排序

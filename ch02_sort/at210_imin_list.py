@@ -1,13 +1,13 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
-# at210_iminlist: 前i个最小数
+# 前i个最小数
 """
     Topic: sample
     Desc : 前i个最小数
         先通过找到第i小的数，然后将这个数作为pivot去划分这个数组，
         左边 + 这个pivot即是解
 """
-from .at209_iminselect2 import iminSelect2
+from .at209_imin_select2 import iminSelect2
 
 __author__ = 'Xiong Neng'
 
