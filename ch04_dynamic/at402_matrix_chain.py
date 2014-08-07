@@ -16,8 +16,8 @@ def matrix_order(p):
     """:param p: 矩阵规模序列，Ai行列分别为p[i-1],p[i]"""
     INF = float('inf')
     n = len(p) - 1  # 矩阵长度
-    m = [[0 for zz in range(0, n)] for z in range(0, n)]  # 保存Ai...Aj最优值
-    s = [['-' for zz in range(0, n)] for z in range(0, n)]  # 保存Ai...Aj最优值时候的括号分割点
+    m = [[0 for zz in range(n)] for z in range(n)]  # 保存Ai...Aj最优值
+    s = [['-' for zz in range(n)] for z in range(n)]  # 保存Ai...Aj最优值时候的括号分割点
     for chain_len in range(2, n + 1):  # chain_len表示每次循环计算链的长度2..n
         for i in range(0, n - chain_len + 1):
             j = i + chain_len - 1
