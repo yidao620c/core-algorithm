@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
 # 最长公共子序列：longest-common-subsequence
+# author: XiongNeng
 """
 Topic: 一个子序列代表，将一个序列中去掉若干元素后得到的序列，可以间隔。
     公共子序列就是，序列A和序列B的公共子序列
@@ -24,13 +25,13 @@ def lcs(arr1, arr2):
         for j in range(1, n + 1):
             if arr1[i - 1] == arr2[j - 1]:
                 c[i][j] = c[i - 1][j - 1] + 1
-                b[i - 1][j - 1] = 'ok'  # 代表此元素放入LCS
+                b[i - 1][j - 1] = '↖'  # 代表此元素放入LCS
             elif c[i - 1][j] >= c[i][j - 1]:
                 c[i][j] = c[i - 1][j]
-                b[i - 1][j - 1] = 'up'  # 行减1，往上
+                b[i - 1][j - 1] = '↑'  # 行减1，往上
             else:
                 c[i][j] = c[i][j - 1]
-                b[i - 1][j - 1] = 'left'  # 列减1，往左
+                b[i - 1][j - 1] = '←'  # 列减1，往左
     rlcs = []
     get_lcs_arr(b, arr1, len(arr1) - 1, len(arr2) - 1, rlcs)
     print('LCS长度为:%d' % c[m][n])
@@ -40,10 +41,10 @@ def lcs(arr1, arr2):
 def get_lcs_arr(b, X, i, j, arr):
     if i < 0 or j < 0:
         return
-    if b[i][j] == 'ok':
+    if b[i][j] == '↖':
         get_lcs_arr(b, X, i - 1, j - 1, arr)
         arr.append(X[i])
-    elif b[i][j] == 'up':
+    elif b[i][j] == '↑':
         get_lcs_arr(b, X, i - 1, j, arr)
     else:
         get_lcs_arr(b, X, i, j - 1, arr)
