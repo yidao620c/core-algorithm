@@ -24,17 +24,18 @@ def lcs(arr1, arr2):
         for j in range(1, n + 1):
             if arr1[i - 1] == arr2[j - 1]:
                 c[i][j] = c[i - 1][j - 1] + 1
-                b[i-1][j-1] = 'ok'  # 代表此元素放入LCS
+                b[i - 1][j - 1] = 'ok'  # 代表此元素放入LCS
             elif c[i - 1][j] >= c[i][j - 1]:
                 c[i][j] = c[i - 1][j]
-                b[i-1][j-1] = 'up'  # 行减1，往上
+                b[i - 1][j - 1] = 'up'  # 行减1，往上
             else:
                 c[i][j] = c[i][j - 1]
-                b[i-1][j-1] = 'left'  # 列减1，往左
+                b[i - 1][j - 1] = 'left'  # 列减1，往左
     rlcs = []
     get_lcs_arr(b, arr1, len(arr1) - 1, len(arr2) - 1, rlcs)
-    print(rlcs)
-    return c, rlcs
+    print('LCS长度为:%d' % c[m][n])
+    print('一个最优解:%s' % str(rlcs))
+    return c[m][n], rlcs
 
 def get_lcs_arr(b, X, i, j, arr):
     if i < 0 or j < 0:
