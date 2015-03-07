@@ -9,11 +9,11 @@
 
 有任何问题都可以联系我：
 
-Email：  yidao620@gmail.com
-QQ:      344063306
-博客：   http://www.pycoding.com/
-GitHub： https://github.com/yidao620c
-公司：   [广州云宏信息科技股份有限公司](http://www.winhong.com/)
+* Email：  yidao620@gmail.com
+* QQ:      344063306
+* 博客：   http://www.pycoding.com/
+* GitHub： https://github.com/yidao620c
+* 公司：   [广州云宏信息科技股份有限公司](http://www.winhong.com/)
 
 ## How to Contribute
 
