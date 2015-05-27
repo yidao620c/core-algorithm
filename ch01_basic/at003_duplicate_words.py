@@ -5,6 +5,8 @@ Topic: 找重名的单词
 Desc : 
 """
 
+import sys
+
 
 def find_count(filename):
     count_map = {}
@@ -18,5 +20,14 @@ def find_count(filename):
 
 
 if __name__ == '__main__':
-    print(find_count(r'D:\work\projects\gitprojects\core-algorithm\files\names.txt'))
+    # filename = sys.argv[1]
+    # print(find_count(filename))
 
+    arr = [3, 5, 200, 304, 22, 34, 5, 12, 99, 567]
+    max_num = 1000000  # 比这些数字里面最大的数大即可
+    init_arr = [0 for i in range(max_num)]  # 初始化数组
+    for n in arr:
+        init_arr[n] += 1
+        if init_arr[n] > 1:
+            print('找到重复的了，{}'.format(n))
+            break
