@@ -11,9 +11,8 @@
 
 * Email：  yidao620@gmail.com
 * QQ:      344063306
-* 博客：   http://www.pycoding.com/
+* 博客：    http://yidao620c.github.io/
 * GitHub： https://github.com/yidao620c
-* 公司：   [广州云宏信息科技股份有限公司](http://www.winhong.com/)
 
 ## How to Contribute
 
@@ -35,7 +34,7 @@ Meanwhile you'd better follow the rules below
 
 (The Apache License)
 
-Copyright (c) 2011-2015 [WinHong, Inc.](http://www.winhong.com/) and other contributors
+Copyright (c) 2011-2015 [Xiong Neng](http://yidao620c.github.io/) and other contributors
 
 Licensed under the Apache License, Version 2.0 (the "License"); 
 you may not use this file except in compliance with the License. You may obtain a copy of the License at
