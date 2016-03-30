@@ -10,7 +10,6 @@
 有任何问题都可以联系我：
 
 * Email：  yidao620@gmail.com
-* QQ:      344063306
 * 博客：    http://yidao620c.github.io/
 * GitHub： https://github.com/yidao620c
 
