@@ -10,7 +10,7 @@ __author__ = 'Xiong Neng'
 
 # 闰年判断
 def isLeapYear(year):
-    return (not(year % 4 and year % 100)) or (not year % 400)
+    return (not year % 4 and year % 100) or (not year % 400)
 
 
 # 找零钱
@@ -33,7 +33,7 @@ def maxCommonDivisor(m, n):
 
 
 # 最小公倍数
-def maxCommonMultiple(m, n):
+def minCommonMultiple(m, n):
     return m * n / maxCommonDivisor(m, n)
 
 
