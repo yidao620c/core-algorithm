@@ -1,16 +1,22 @@
-﻿## 《算法导论》第3版算法集锦 - python实现
+﻿## 算法集锦 - python实现
+
+参考书籍列表，从易到难的顺序，建议按照顺序阅读：
+
+* 《大话数据结构》
+* 《算法图解》
+* 《算法》第4版
+* 《算法导论》第3版
 
 ### 作者的话
-《算法导论》第3版，这本书的经典程度就无需我多言了。
 
 书中所有的算法示例都用python语言实现，并且配有详细的算法原理说明，有些复杂算法还会专门写博客来讲解。
 
-希望这些对自己，还有其他人都有所帮助。
+自从2016年后好久没更新了，今年2020年开始会继续更新这个系列。希望这些对自己，还有其他人都有所帮助。
 
 有任何问题都可以联系我：
 
 * Email：  yidao620@gmail.com
-* 博客：    http://yidao620c.github.io/
+* Blog：   https://www.xncoding.com/
 * GitHub： https://github.com/yidao620c
 
 ## How to Contribute
@@ -33,7 +39,7 @@ Meanwhile you'd better follow the rules below
 
 (The Apache License)
 
-Copyright (c) 2011-2015 [Xiong Neng](http://yidao620c.github.io/) and other contributors
+Copyright (c) 2013-2020 [Xiong Neng](https://www.xncoding.com/) and other contributors
 
 Licensed under the Apache License, Version 2.0 (the "License"); 
 you may not use this file except in compliance with the License. You may obtain a copy of the License at
