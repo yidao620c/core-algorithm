@@ -11,7 +11,7 @@ __author__ = 'Xiong Neng'
 def biAdd(a, b):
     res = []
     m = 0
-    r = range(0, len(a))
+    r = list(range(0, len(a)))
     r.reverse()
     for i in r:
         m, n = divmod(a[i] + b[i] + m, 2)

@@ -36,5 +36,6 @@ def nine_number():
                     result.append((each1, each2, each3))
     return result
 
+
 if __name__ == '__main__':
     print(nine_number())

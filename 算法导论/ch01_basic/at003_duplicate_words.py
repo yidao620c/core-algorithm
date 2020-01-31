@@ -5,8 +5,6 @@ Topic: 找重名的单词
 Desc : 
 """
 
-import sys
-
 
 def find_count(filename):
     count_map = {}

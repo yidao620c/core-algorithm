@@ -16,5 +16,6 @@ def list_chess():
     for i in range(1, 10):
         print([(i, k) for k in range(1, 10) if abs(k - i) % 3 != 0])
 
+
 if __name__ == '__main__':
     list_chess()

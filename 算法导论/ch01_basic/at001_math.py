@@ -93,7 +93,7 @@ def main():
     print(fibonacci(8))
     mod(0.78)
     print(maxCommonDivisor(24, 36))
-    print(maxCommonMultiple(24, 36))
+    print(minCommonMultiple(24, 36))
 
 
 if __name__ == '__main__':

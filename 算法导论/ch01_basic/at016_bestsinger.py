@@ -37,7 +37,7 @@ def lucky_seven(rows=166, cols=5, choices=13, lucky=7, start=1):
                     if nextnum > choices:
                         nextnum -= choices
                 if nextnum > choices:
-                        nextnum -= choices
+                    nextnum -= choices
                 votes[row][col] = nextnum
                 nextnum += 1
     return votes

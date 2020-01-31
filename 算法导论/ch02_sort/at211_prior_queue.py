@@ -5,7 +5,7 @@
     Topic: sample
     Desc : 最大堆实现最大优先级队列
 """
-import ch02_sort.at200_heap_sort as hsort
+from 算法导论 import ch02_sort as hsort
 
 __author__ = 'Xiong Neng'
 

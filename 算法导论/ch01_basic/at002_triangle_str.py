@@ -20,5 +20,6 @@ def triangleDisplay(mystr):
         result.append(mystr[i: -1])
     return result
 
+
 for each in triangleDisplay(u"我和我的小伙伴们都惊呆了"):
     print(each)

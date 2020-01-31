@@ -49,4 +49,3 @@ if __name__ == '__main__':
     se = [4, 5, 12, 44, 56, 6]
     shuffle(se)  # python中的函数
     print(se)
-

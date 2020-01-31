@@ -5,11 +5,14 @@
     Topic: sample
     Desc : CPU正弦曲线
 """
-import itertools, math, time, sys
+import itertools
+import math
+import sys
+import time
 
 __author__ = 'Xiong Neng'
 
-time_period = float(sys.argv[1]) if len(sys.argv) > 1 else 60   # seconds
+time_period = float(sys.argv[1]) if len(sys.argv) > 1 else 60  # seconds
 time_slice = float(sys.argv[2]) if len(sys.argv) > 2 else 0.04  # seconds
 
 N = int(time_period / time_slice)

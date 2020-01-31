@@ -8,6 +8,7 @@
         最后结论：  k < lg(n)的时候，使用暴力算法
 """
 from math import log
+
 __author__ = 'Xiong Neng'
 
 
@@ -60,6 +61,7 @@ def __maxCrossingSubArr(seq, low, mid, high):
             rightSum = sumTemp
             maxRight = j
     return maxLeft, maxRight, leftSum + rightSum
+
 
 if __name__ == '__main__':
     print(maxSubArr([13, -3, -25, 20, -3, -16, -23, 18, 20, -7, 12, -5, -22, 15, -4, 7]))

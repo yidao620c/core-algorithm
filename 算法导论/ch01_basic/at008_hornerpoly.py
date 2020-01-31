@@ -15,5 +15,6 @@ def hornerPoly(coefficientArr, x):
         res = coefficientArr[i] + x * res
     return res
 
+
 if __name__ == '__main__':
     print(hornerPoly((1, 2, 3), 2))
