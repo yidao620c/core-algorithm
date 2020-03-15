@@ -1,0 +1,14 @@
+.md-typeset table:not([class]) th {
+    min-width: 5rem;
+    padding: .6rem .8rem;
+    background-color: #9facf6;
+    color: #fff;
+    vertical-align: top;
+}
+
+.md-footer-nav__link {
+    padding-top: 0;
+    padding-bottom: 0;
+    -webkit-transition: opacity .25s;
+    transition: opacity .25s;
+}
