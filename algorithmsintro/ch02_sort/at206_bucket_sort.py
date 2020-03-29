@@ -11,7 +11,7 @@
 """
 from math import floor
 
-from 算法导论.ch02_sort import insertSort
+from algorithmsintro.ch02_sort import insertSort
 
 __author__ = 'Xiong Neng'
 
