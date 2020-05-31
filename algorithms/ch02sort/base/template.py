@@ -25,7 +25,6 @@ class SortTemplate:
     def show(self, vals):
         for val in vals:
             print("{}".format(val), end=' ')
-        print()
 
     def is_sorted(self, vals):
         for i in range(1, len(vals)):

@@ -1,11 +1,11 @@
 # -*- encoding: utf-8 -*-
-"""自己实现的一个简单队列
+"""基于链表实现的一个简单队列
 队尾插入元素，队头取元素。就跟在菜市场排队买菜原理是一样的
 """
-from algorithms.ch00structure.stack import Node
+from algorithms.ch01structure import Node
 
 
-class Queue:
+class LinkedQueue:
     def __init__(self):
         self.first = None  # beginning of queue
         self.last = None  # end of queue

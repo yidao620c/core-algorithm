@@ -4,6 +4,7 @@
 另一方面，迭代器应该一直可以迭代。迭代器的 `__iter__` 方法应该返回自身。
 一般可使用生成器函数实现更符合python风格的可迭代对象。
 """
+from algorithms.ch01structure import Node
 
 
 class Stack:
@@ -38,11 +39,3 @@ class Stack:
         while self.n > 0:
             yield self.pop()
 
-
-class Node:
-    def __init__(self, item_, next_=None):
-        self.item = item_
-        self.next = next_
-
-    def __str__(self):
-        return str(self.item)

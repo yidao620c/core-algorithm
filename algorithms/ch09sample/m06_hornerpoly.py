@@ -9,12 +9,12 @@
 __author__ = 'Xiong Neng'
 
 
-def hornerPoly(coefficientArr, x):
+def horner_poly(coefficient_arr, x):
     res = 0
-    for i in range(len(coefficientArr))[-1::-1]:
-        res = coefficientArr[i] + x * res
+    for i in range(len(coefficient_arr))[-1::-1]:
+        res = coefficient_arr[i] + x * res
     return res
 
 
 if __name__ == '__main__':
-    print(hornerPoly((1, 2, 3), 2))
+    print(horner_poly((1, 2, 3), 2))
