@@ -7,9 +7,9 @@ class Node:
     """
     节点信息
     """
-    def __init__(self, item_, next_=None):
-        self.item = item_
+    def __init__(self, val_, next_=None):
+        self.val = val_
         self.next = next_
 
     def __str__(self):
-        return str(self.item)
+        return str(self.val)

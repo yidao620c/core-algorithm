@@ -25,7 +25,7 @@ class Stack:
     def pop(self):
         if self.is_empty():
             raise LookupError('Stack underflow')
-        result = self.first.item
+        result = self.first.val
         self.first = self.first.next
         self.n -= 1
         return result
@@ -33,7 +33,7 @@ class Stack:
     def peek(self):
         if self.is_empty():
             raise LookupError('Stack underflow')
-        return self.first.item
+        return self.first.val
 
     def __iter__(self):
         while self.n > 0:

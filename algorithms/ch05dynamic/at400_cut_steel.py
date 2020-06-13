@@ -18,25 +18,26 @@ def bottom_up_cut_rod(p, n):
     param p: 价格数组，长度为i的钢条价格为p[i]
     param n: 钢条总长度
     """
-    # 先初始化数组r
-    r = [0] * (n + 1)
-    # 用来保存每个最优解二维数组，ans[i]表示长度为i的最优解
-    ans = [[]]
-    for j in range(1, n + 1):
-        q = -999
+    # 先初始化数组r，最优解值数组。r[i]表示长度为i的时候的最优解。
+    best_incomes = [0] * (n + 1)
+    # 用来保存每个最优切割方案二维数组，ans[i]表示长度为i的最优切割方案
+    best_solutions = [[]]
+    for j in range(1, n + 1):  # 自顶向上迭代
+        max_val = -999
         # 下面这个内层循环保证长度为j时候所有情况都考虑到了
         # 因为i会从1迭代到j，也就是切割方案中左边方案为1,2...j的时候，跟右边已经有最优解的加起来，
-        # 然后算所有的加起来的和的最大值，那肯定就是最优解了！ NB啊
+        # 然后算所有的加起来的和的最大值，那肯定就是最优解了！
+        first = 0
         for i in range(1, j + 1):
-            if q < p[i] + r[j - i]:
-                q = p[i] + r[j - i]
-                ii = i
-        r[j] = q
-        ans.append([ii] + ans[j - ii])
-    return r[n], ans[len(ans) - 1]
+            if max_val < p[i] + best_incomes[j - i]:
+                max_val = p[i] + best_incomes[j - i]
+                first = i
+        best_incomes[j] = max_val
+        best_solutions.append([first] + best_solutions[j - first])
+    return best_incomes[n], best_solutions[n]
 
 
 if __name__ == '__main__':
-    parry = [0, 1, 5, 8, 9, 10, 17, 17, 20, 24, 30]
-    for k in range(1, 11):
+    parry = [0, 1, 5, 8, 9, 10, 17, 18, 20, 21, 23, 25, 26, 30]
+    for k in range(1, 13):
         print(bottom_up_cut_rod(parry, k))
