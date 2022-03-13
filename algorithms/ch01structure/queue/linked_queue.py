@@ -28,7 +28,7 @@ class LinkedQueue:
     def dequeue(self):
         if self.is_empty():
             raise LookupError('Queue underflow')
-        item = self.first.val
+        item = self.first.data
         self.first = self.first.next
         self.n -= 1
         if self.is_empty():

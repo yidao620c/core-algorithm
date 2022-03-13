@@ -5,11 +5,26 @@
 
 class Node:
     """
-    节点信息
+    单指针节点
     """
-    def __init__(self, val_, next_=None):
-        self.val = val_
+
+    def __init__(self, data_, next_=None):
+        self.data = data_
         self.next = next_
 
     def __str__(self):
-        return str(self.val)
+        return str(self.data)
+
+
+class NodeDouble:
+    """
+    双指针节点
+    """
+
+    def __init__(self, data_, next_=None, pre_=None):
+        self.data = data_
+        self.next = next_
+        self.pre = pre_
+
+    def __str__(self):
+        return str(self.data)

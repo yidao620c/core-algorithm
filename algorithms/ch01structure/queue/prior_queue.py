@@ -1,6 +1,6 @@
 # -*- encoding: utf-8 -*-
-"""基于二叉堆实现的优先队列
-Some of description...
+"""
+基于二叉堆实现的优先队列
 """
 from functools import total_ordering
 
@@ -69,9 +69,9 @@ class MaxPriorQueue:
 
 @total_ordering
 class Item:
-    def __init__(self, key, val, index=-1):
+    def __init__(self, key, data, index=-1):
         self.key = key
-        self.val = val
+        self.data = data
         self.index = index
 
     def __eq__(self, other):
@@ -81,7 +81,7 @@ class Item:
         return self.key < other.key
 
     def __str__(self):
-        return str((self.val, self.key, self.index))
+        return str((self.data, self.key, self.index))
 
 
 if __name__ == '__main__':

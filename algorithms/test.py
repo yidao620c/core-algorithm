@@ -5,5 +5,6 @@ class Father:
 
 
 if __name__ == '__main__':
-    Father("aa")
+    a = b = c = 2
+    print(a,b,c)
     pass

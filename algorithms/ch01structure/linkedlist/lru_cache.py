@@ -11,3 +11,31 @@
   2.1 如果此时缓存未满，则将此结点直接插入到链表的头部；
   2.2 如果此时缓存已满，则链表尾结点删除，将新的数据结点插入链表的头部。
 """
+from algorithms.ch01structure import Node
+from algorithms.ch01structure.linkedlist.linked_list_single import LinkedListSingle
+
+
+def lru(list_single_, data):
+    find_node = list_single_.search(data)
+    if find_node:
+        list_single_.remove(find_node)
+        list_single_.insert(list_single_.head, find_node)
+    else:
+        if not list_single_.is_full():
+            list_single_.insert(list_single_.head, new_node = Node(data))
+        else:
+            tail = list_single_.get_tail()
+            new_node = Node(data)
+            list_single_.remove(tail)
+            list_single_.insert(list_single_.head, new_node)
+    list_single_.print()
+
+
+if __name__ == '__main__':
+    list_single = LinkedListSingle(3)
+    lru(list_single, 2)
+    lru(list_single, 3)
+    lru(list_single, 2)
+    lru(list_single, 1)
+    lru(list_single, 5)
+    lru(list_single, 6)
