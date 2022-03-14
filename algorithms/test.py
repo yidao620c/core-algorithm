@@ -5,6 +5,8 @@ class Father:
 
 
 if __name__ == '__main__':
-    a = b = c = 2
-    print(a,b,c)
+    # a = b = c = 2
+    # print(a,b,c)
+    input("请输入三角形三边的长：")
     pass
+
