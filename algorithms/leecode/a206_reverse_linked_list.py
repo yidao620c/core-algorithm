@@ -10,6 +10,8 @@
 -5000 <= Node.val <= 5000
 
 进阶：链表可以选用迭代或递归方式完成反转。你能否用两种方法解决这道题？
+
+使用贪吃蛇算法，将原始链表比喻成糖葫芦，贪吃蛇一口一个，把糖葫芦吃完为止。
 """
 
 
@@ -27,20 +29,20 @@ class Solution:
     def reverseList(self, head: ListNode) -> ListNode:
         if not head:
             return None
-        head_next = head.next  # 下一跳
-        while head_next:
-            head_next_next = head_next.next
-            head_next.next = head
-            if head.next == head_next:  # 头节点变尾结点
-                head.next = None
-            head = head_next  # head指针前移
-            head_next = head_next_next  # 重新赋值下一跳
-        return head
+        food = head
+        snake = None
+
+        while food:
+            apple = food        # 取下糖葫芦第一个苹果
+            food = food.next    # 糖葫芦减掉一个
+            apple.next = snake  # 吞掉一个苹果
+            snake = apple       # 调整蛇的头部指向这个苹果
+        return snake
 
 
 if __name__ == '__main__':
     # 本地运行需要以下输入输出的补充
-    list_input = list(input('input list: ').split())
+    # list_input = list(input('input list: ').split())
 
     head = ListNode(1)
     head.next = ListNode(2)
