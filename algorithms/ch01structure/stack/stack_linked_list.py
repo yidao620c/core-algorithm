@@ -7,7 +7,7 @@
 from algorithms.ch01structure import Node
 
 
-class Stack:
+class LinkedStack:
     def __init__(self):
         self.first = None  # top of stack
         self.n = 0  # size of the stack
@@ -24,7 +24,7 @@ class Stack:
 
     def pop(self):
         if self.is_empty():
-            raise LookupError('Stack underflow')
+            return None
         result = self.first.data
         self.first = self.first.next
         self.n -= 1
@@ -32,7 +32,7 @@ class Stack:
 
     def peek(self):
         if self.is_empty():
-            raise LookupError('Stack underflow')
+            return None
         return self.first.data
 
     def __iter__(self):

@@ -4,7 +4,7 @@
 """
 from functools import total_ordering
 
-from algorithms.ch01structure.stack.linked_stack import Stack
+from algorithms.ch01structure.stack.stack_linked_list import LinkedStack
 
 
 class MaxPriorQueue:
@@ -96,7 +96,7 @@ if __name__ == '__main__':
     for item in items:
         prior_queue.insert(item)
 
-    stack = Stack()
+    stack = LinkedStack()
     while not prior_queue.is_empty():
         stack.push(prior_queue.del_max())
     for item in stack:
