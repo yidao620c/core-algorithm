@@ -5,9 +5,7 @@ class Father:
 
 
 if __name__ == '__main__':
-    # a = b = c = 2
-    # print(a,b,c)
-    # input("请输入三角形三边的长：")
-    if not []:
-        print('ddd')
-    pass
+    import re
+    ss = re.split(r'([()+*/])|((?<=\d)-)', '(-12+(4+5+2)-3)+(-6+8)')
+    s = [s for s in ss if s]
+    print(s)
