@@ -1,6 +1,6 @@
 # -*- encoding: utf-8 -*-
-"""将重复的方法抽取出来
-Some of description...
+"""
+将重复的方法抽取出来
 """
 
 

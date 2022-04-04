@@ -5,6 +5,7 @@
 2. 在剩下的元素中找到最小元素，将其与数组第二个元素交换位置。
 3. 如此反复，直到剩下元素为1个，整个数组排序完。
 
+不稳定排序，使用场景少。
 复杂度：O(N^2)，大约需要N^2/2次比较和N次交换。
 """
 from algorithms.ch02sort.base.template import SortTemplate
