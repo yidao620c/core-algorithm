@@ -7,6 +7,8 @@
 
 复杂度：N*lg(N)
 稳定排序：重复元素排序完后仍然保持原来的相对位置。
+
+它有一个致命的“弱点”，那就是归并排序不是原地排序算法。
 """
 from algorithms.ch02sort.base.template import SortTemplate
 
