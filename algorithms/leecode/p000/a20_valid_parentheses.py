@@ -23,7 +23,7 @@
 
 算法思路：栈的最简单的应用。左括号入栈，右括号出栈+对比匹配。不匹配则False，最后栈空则True
 """
-from algorithms.ch01structure.stack.stack_linked_list import LinkedStack
+from algorithms.ch01linear.stack.stack_linked_list import LinkedStack
 
 
 class Solution:

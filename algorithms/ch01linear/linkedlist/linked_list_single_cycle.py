@@ -1,19 +1,18 @@
 # -*- encoding: utf-8 -*-
 """
-双向循环链表数据结构
+单向循环链表数据结构
 """
-from algorithms.ch01structure import NodeDouble
+from algorithms.ch01linear import Node
 
 
-class LinkedListDouble:
+class LinkedListSingleCycle:
     """
-    双向循环链表，带哨兵
+    单向循环链表，带哨兵
     """
 
     def __init__(self):
-        head = NodeDouble(None)
-        head.pre = head.next = head  # 将pre和next都指向自己
-        self.head = head
+        self.head = Node(None)
+        self.head.next = self.head
 
     def insert_node(self, node, new_node):
         """
@@ -22,7 +21,6 @@ class LinkedListDouble:
         :return:
         """
         new_node.next = node.next
-        new_node.pre = node
         node.next = new_node
 
     def remove_node(self, node):
@@ -30,10 +28,10 @@ class LinkedListDouble:
         :param node:待删除节点
         :return:
         """
-        if node == self.head:  # 不能删除头节点
-            return
-        node.pre.next = node.next
-        node.next.pre = node.pre
+        pre_node = self.head
+        while pre_node.next != node:
+            pre_node = pre_node.next
+        pre_node.next = node.next
 
     def search(self, data):
         """

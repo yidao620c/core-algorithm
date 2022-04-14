@@ -2,7 +2,7 @@
 """
 基于数组实现的栈结构
 """
-from algorithms.ch01structure import Node
+from algorithms.ch01linear import Node
 
 
 class ArrayStack:

@@ -11,8 +11,8 @@ Question：怎样用单链表实现LRU缓存淘汰算法？
   2.1 如果此时缓存未满，则将此结点直接插入到链表的头部；
   2.2 如果此时缓存已满，则链表尾结点删除，将新的数据结点插入链表的头部。
 """
-from algorithms.ch01structure import Node
-from algorithms.ch01structure.linkedlist.linked_list_single import LinkedListSingle
+from algorithms.ch01linear import Node
+from algorithms.ch01linear.linkedlist.linked_list_single import LinkedListSingle
 
 
 def lru(list_single_, data):

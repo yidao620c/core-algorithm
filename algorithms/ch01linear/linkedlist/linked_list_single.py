@@ -2,7 +2,7 @@
 """
 单向链表数据结构
 """
-from algorithms.ch01structure import Node
+from algorithms.ch01linear import Node
 
 
 class LinkedListSingle:

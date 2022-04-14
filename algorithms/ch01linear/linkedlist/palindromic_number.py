@@ -14,8 +14,8 @@ Question：如果字符串是通过单链表来存储的，那该如何来判断
   1.2.1 如果是返回上中位数，后半部分串头取next <<=这里使用这张上中位数数
   1.2.2 如果是返回下中位数，后半部分串头既是当前节点位置，但前半部分串尾要删除掉当前节点
 """
-from algorithms.ch01structure import Node
-from algorithms.ch01structure.linkedlist.linked_list_single import LinkedListSingle
+from algorithms.ch01linear import Node
+from algorithms.ch01linear.linkedlist.linked_list_single import LinkedListSingle
 
 
 def palindromic(list_single_):

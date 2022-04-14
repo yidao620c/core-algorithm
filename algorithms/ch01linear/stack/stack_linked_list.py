@@ -4,7 +4,7 @@
 另一方面，迭代器应该一直可以迭代。迭代器的 `__iter__` 方法应该返回自身。
 一般可使用生成器函数实现更符合python风格的可迭代对象。
 """
-from algorithms.ch01structure import Node
+from algorithms.ch01linear import Node
 
 
 class LinkedStack:

@@ -4,7 +4,7 @@
 """
 from functools import total_ordering
 
-from algorithms.ch01structure.stack.stack_linked_list import LinkedStack
+from algorithms.ch01linear.stack.stack_linked_list import LinkedStack
 
 
 class MaxPriorQueue:

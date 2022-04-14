@@ -2,7 +2,7 @@
 """
 双向链表数据结构
 """
-from algorithms.ch01structure import NodeDouble
+from algorithms.ch01linear import NodeDouble
 
 
 class LinkedListDouble:

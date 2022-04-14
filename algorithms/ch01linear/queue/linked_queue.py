@@ -2,7 +2,7 @@
 """基于链表实现的一个简单队列
 队尾插入元素，队头取元素。就跟在菜市场排队买菜原理是一样的
 """
-from algorithms.ch01structure import Node
+from algorithms.ch01linear import Node
 
 
 class LinkedQueue:
