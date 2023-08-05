@@ -19,14 +19,15 @@ class Point:
     def __str__(self):
         return f'({self.row},{self.column})'
 
-    def path(self):
-        point = self
-        stack = LinkedStack()
-        while point is not None:
-            stack.push(self)
-            point = point.parent
-        for point in stack:
-            print(point, sep=',')
+
+def print_path(point):
+    """打印路径"""
+    stack = LinkedStack()
+    while point is not None:
+        stack.push(stack)
+        point = point.parent
+    for point in stack:
+        print(point, sep=',')
 
 
 def run_bfs(maze, current_point, visited_points):
@@ -43,6 +44,6 @@ def run_bfs(maze, current_point, visited_points):
                 q.enqueue(neighbor)
                 visited_points.add(neighbor)
                 if neighbor == maze.goal:
-                    neighbor.path()
+                    print_path(neighbor)
                     return
     print('find no path')
