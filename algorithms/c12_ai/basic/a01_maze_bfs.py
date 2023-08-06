@@ -1,6 +1,6 @@
 # -*- encoding: utf-8 -*-
 """
-迷宫搜索：广度优先算法
+迷宫搜索：广度优先算法，通过队列来实现
 """
 
 from algorithms.c01_linear.queue.linked_queue import LinkedQueue
@@ -40,10 +40,10 @@ def run_bfs(maze, current_point, visited_points):
         neighbors = []
         for neighbor in neighbors:
             if neighbor not in visited_points:
+                visited_points.add(neighbor)
                 neighbor.parent = current_point
                 q.enqueue(neighbor)
-                visited_points.add(neighbor)
                 if neighbor == maze.goal:
                     print_path(neighbor)
-                    return
+                    return neighbor
     print('find no path')
