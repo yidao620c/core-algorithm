@@ -10,3 +10,9 @@
 * 删除链表倒数第 n 个结点
 * 求链表的中间结点
 """
+
+
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
