@@ -20,22 +20,8 @@ from algorithms.c01_linear.linkedlist import ListNode
 class Solution:
     def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> Optional[ListNode]:
         p1 = headA
-        p1_change = False
         p2 = headB
-        p2_change = False
         while p1 != p2:
-            if p1.next:
-                p1 = p1.next
-            elif not p1_change:
-                p1 = headB
-                p1_change = True
-            else:
-                p1 = None
-            if p2.next:
-                p2 = p2.next
-            elif not p2_change:
-                p2 = headA
-                p2_change = True
-            else:
-                p2 = None
+            p1 = p1.next if p1 else headB
+            p2 = p2.next if p2 else headA
         return p1
