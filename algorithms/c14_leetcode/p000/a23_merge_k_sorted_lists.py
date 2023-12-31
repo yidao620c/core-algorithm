@@ -10,7 +10,7 @@
 """
 from typing import List, Optional
 
-from algorithms.c01_linear.linkedlist import ListNode
+from algorithms.c01_data_structure.linkedlist import ListNode
 from queue import PriorityQueue
 
 

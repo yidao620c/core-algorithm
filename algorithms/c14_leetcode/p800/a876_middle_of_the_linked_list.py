@@ -36,6 +36,7 @@ class ListNode:
             yield node.val
             node = node.next
 
+
 class Solution:
     def middleNode(self, head: ListNode) -> ListNode:
         if not head:
@@ -64,5 +65,3 @@ if __name__ == '__main__':
     res = solution.middleNode(head)
     # output
     print(list(res))
-
-

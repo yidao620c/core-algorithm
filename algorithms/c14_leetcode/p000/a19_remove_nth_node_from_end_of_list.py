@@ -57,5 +57,3 @@ if __name__ == '__main__':
     res = solution.removeNthFromEnd(head, 5)
     print()
     # output
-
-

@@ -3,7 +3,7 @@
 迷宫搜索：深度优先算法，通过栈来实现
 """
 
-from algorithms.c01_linear.stack.stack_linked_list import LinkedStack
+from algorithms.c01_data_structure.stack.stack_linked_list import LinkedStack
 
 
 class Point:
@@ -45,7 +45,3 @@ def run_dfs(maze, root_point, visited_points):
                 neighbor.parent = current_point
                 s.push(neighbor)
     print('find no path')
-
-
-
-

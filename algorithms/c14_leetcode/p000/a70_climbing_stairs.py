@@ -22,6 +22,7 @@ class Solution:
 
 if __name__ == '__main__':
     import sys
+
     while True:
         line = sys.stdin.readline().strip()
         if line == '':

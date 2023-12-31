@@ -43,6 +43,7 @@ class Solution:
                 food = temp_food  # 将原来剩余的蛇身变成食物。这样完成了蛇身和食物的交换。
         return result
 
+
 if __name__ == '__main__':
     a = ListNode(1)
     b = ListNode(2)

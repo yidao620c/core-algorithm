@@ -3,8 +3,8 @@
 迷宫搜索：广度优先算法，通过队列来实现
 """
 
-from algorithms.c01_linear.queue.linked_queue import LinkedQueue
-from algorithms.c01_linear.stack.stack_linked_list import LinkedStack
+from algorithms.c01_data_structure.queue.linked_queue import LinkedQueue
+from algorithms.c01_data_structure.stack.stack_linked_list import LinkedStack
 
 
 class Point:

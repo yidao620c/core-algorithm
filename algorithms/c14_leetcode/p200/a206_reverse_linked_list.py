@@ -33,10 +33,10 @@ class Solution:
         snake = None
 
         while food:
-            apple = food        # 取下糖葫芦第一个苹果
-            food = food.next    # 糖葫芦减掉一个
+            apple = food  # 取下糖葫芦第一个苹果
+            food = food.next  # 糖葫芦减掉一个
             apple.next = snake  # 吞掉一个苹果
-            snake = apple       # 调整蛇的头部指向这个苹果
+            snake = apple  # 调整蛇的头部指向这个苹果
         return snake
 
 
@@ -55,5 +55,3 @@ if __name__ == '__main__':
     res = solution.reverseList(head)
     print()
     # output
-
-

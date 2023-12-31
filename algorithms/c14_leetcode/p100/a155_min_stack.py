@@ -15,7 +15,7 @@ int getMin() 获取堆栈中的最小元素。
 通过空间换时间的方法。将每次入栈的节点包装成一个对象，存储两个信息，一个是节点值，一个是当前栈的最小值。
 这样获取栈顶元素就同时能获取到这两个值了。
 """
-from algorithms.c01_linear import Node
+from algorithms.c01_data_structure import Node
 
 
 class MinStack:
@@ -32,12 +32,10 @@ class MinStack:
         if self.first:
             self.first = self.first.next
 
-
     def top(self) -> int:
         if not self.first:
             return None
         return self.first.data[0]
-
 
     def getMin(self) -> int:
         if not self.first:
