@@ -7,7 +7,6 @@
 * 《啊哈算法》
 * 《算法导论》
 * 《labuladong的算法小抄》
-* 《人工智能算法图解》
 
 ## 章节说明
 
@@ -23,8 +22,8 @@
 10. 【第十章】贪心算法
 11. 【第十一章】高级数据结构和算法
 12. 【第十二章】AI算法
-13. 【第十三章】算法示例程序
-14. 【第十四章】LeetCode刷题记录
+13. 【第十三章】LeetCode刷题
+14. 【第十四章】算法小抄
 
 ## 作者的话
 
@@ -56,7 +55,7 @@ You are welcome to contribute to the project as follow
 * commit new feature
 * add testcase
 
-Meanwhile you'd better follow the rules below
+Meanwhile, you'd better follow the rules below
 
 * It's *NOT* recommended to submit a pull request directly to `master` branch. `develop` branch is more appropriate
 * Follow common Python coding conventions
